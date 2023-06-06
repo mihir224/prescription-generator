@@ -20,15 +20,19 @@ function Input(){
         const doc=new jsPDF();
         html2canvas(element).then((canvas)=>{
             const imgData=canvas.toDataURL('image/png');
-            doc.addImage(imgData,'PNG',10,10,190,0)
+            doc.addImage(imgData,'PNG',5,10,200,0)
             doc.save("prescription.pdf");
         })
     }
     return(
         <div id='input'>
-            <div id='prescription'>
-            <h1>The Johns Hopkins Hospital</h1>
-            <h3>United States</h3>
+        <div id='input-body'>
+            <textarea id='ta' onChange={handleChange} value={input} placeholder='Enter prescription text...'></textarea>
+            <div ref={inputRef} id='prescription'>
+            <div id='title'>
+                <h1>The Johns Hopkins Hospital</h1>
+                <h3>United States</h3>
+            </div>
             <div id='header'>
             <div>
                 <h2>Mihir Saini</h2>
@@ -36,9 +40,10 @@ function Input(){
             </div>
             <div><span>{formattedDate}</span></div>
             </div>
-                <p>Suspendisse sed velit vitae ex semper auctor in ac neque. Donec pulvinar tortor at nibh aliquet volutpat. Mauris velit est, malesuada sed porta ac, euismod et ex. Donec ultricies tortor a urna lacinia posuere. Integer eget odio eu velit ornare euismod placerat a elit. Donec ac laoreet ante. Etiam nec nisi ac purus bibendum tempor. Integer elementum felis in eros auctor, vitae tincidunt quam facilisis. Quisque et iaculis neque, non maximus ligula.</p>
+            <hr/>
+                <p id='content'>{input}</p>
             </div>
-            <textarea ref={inputRef} id='ta' onChange={handleChange} value={input} placeholder='Enter prescription text...'></textarea>
+        </div>
             <button className='btn' onClick={handleClick} >Generate Prescription</button>
         </div>
     )

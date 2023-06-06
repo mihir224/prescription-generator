@@ -80,10 +80,15 @@ hr{
 }
 @media screen and (max-width:1000px) {
     #input{
-        height: 50%;
+        height:70%
     }
-    #ta{
-        width: 90vw;
-        height: 40%;
-    }
+   #input-body{
+       flex-direction: column;
+       align-items: center;
+       gap:0px
+   }
+   #prescription,#ta{
+       width: 90%;
+       padding: 0;
+   }
 }
