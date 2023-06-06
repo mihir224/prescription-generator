@@ -1,19 +1,28 @@
 #input{
-    height: 80%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    
+}
+#input-body{
+    display:flex;
+    height:80%;
+    gap:20px;
+    justify-content: space-evenly;
+    width: 96%;
+
 }
 #ta{
-    width: 60vw;
+    width: 50%;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.8);
     font-size: 15px;
     padding:5px 8px 5px 8px;
     background-color: #D8C4B6;
     border-radius: 4px;
-    height: 60%;
+
     font-family: 'poppins';
     border: 1px solid #da894f67;
     text-align: justify;
@@ -43,13 +52,31 @@
 #prescription{
     text-align: left;
     background-color: white;
-    padding:30px;
-}
+    padding:20px;
+    width: 50%;
+    overflow-y: scroll;
 
+
+}
+#title{
+    text-align: center;
+
+    text-decoration: underline;
+}
 #header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+}
+#content{
+    text-align: justify;
+    font-family: 'Liu Jian Mao Cao';
+    font-size: 18px;
+}
+hr{
+    opacity:0.7;
+    width:100%
 }
 @media screen and (max-width:1000px) {
     #input{
