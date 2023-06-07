@@ -1,7 +1,7 @@
 #navbar{
     display: flex;
     align-items:center;
-    padding:20px 30px;
+    padding:15px 30px;
     color:white;
     gap:5px;
     background-color: #da894f;

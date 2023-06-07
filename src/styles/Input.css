@@ -1,32 +1,41 @@
 #input{
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    
+   padding: 10px 5px ;
+   height: 100%;
 }
 #input-body{
     display:flex;
-    height:80%;
-    gap:20px;
-    justify-content: space-evenly;
-    width: 96%;
-
+    height:100%;
+    width: 100%;
+    gap:5px;
+    justify-content: space-between;
+}
+#initial-body{
+    display:flex;
+    height:100%;
+    width: 100%;
+    gap:5px;
+    justify-content: center;
+    
+}
+#text-input{
+    width: 50%;
+}
+#initial-input{
+    width:60%;
+height: 80%;
 }
 #ta{
-    width: 50%;
+    width: 97%;
+    height: 50%;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.8);
     font-size: 15px;
     padding:5px 8px 5px 8px;
     background-color: #D8C4B6;
     border-radius: 4px;
-
     font-family: 'poppins';
     border: 1px solid #da894f67;
-    text-align: justify;
-
+    
 }
 #ta::placeholder{
     opacity: 0.8;
@@ -51,23 +60,68 @@
 }
 #prescription{
     text-align: left;
-    background-color: white;
-    padding:20px;
-    width: 50%;
-    overflow-y: scroll;
-
-
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../medical-logo.png');
+    padding:12px;
+    width: 50%;  
+    height: 120vh;
+    background-repeat: no-repeat;
+    background-position: center center
 }
+
 #title{
     text-align: center;
-
     text-decoration: underline;
 }
 #header{
     display: flex;
-    align-items: center;
     justify-content: space-between;
-
+    font-family:'sans-serif'
+}
+.highlighted{
+    color:#1181a0;
+    font-weight: 600;
+}
+#m-logo{
+    align-self: center;
+}
+#patient-info{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+    font-size: 14px;
+}
+ul{
+    padding:2px 20px;
+    margin: 0;
+}
+.bold{
+    font-weight: bold;
+}
+#date{
+    font-size: 14px;
+    font-weight: bold;
+}
+.grid-container{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    font-size: 14px;
+}
+.col{
+    padding-left: 15px;
+    border-bottom: 1px solid black;
+}
+.row{
+    padding-left: 15px;
+}
+.grid-container-two{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    font-size: 14px;
 }
 #content{
     text-align: justify;
@@ -75,20 +129,25 @@
     font-size: 18px;
 }
 hr{
-    opacity:0.7;
+   
     width:100%
 }
 @media screen and (max-width:1000px) {
     #input{
-        height:70%
+        height:70%;
+        padding:10px 0;
     }
    #input-body{
        flex-direction: column;
        align-items: center;
-       gap:0px
+       gap:10px
+   }
+  
+   #text-input{
+       width: 100%;
    }
    #prescription,#ta{
-       width: 90%;
+       width: 97%;
        padding: 0;
    }
 }
