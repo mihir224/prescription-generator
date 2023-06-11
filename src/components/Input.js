@@ -10,7 +10,6 @@ import barcode from '../barcode.png';
 function Input(){
     const [input,setInput] = useState("");
     const inputRef=useRef(null);
-
     const currentDate = new Date();
     const formattedDate = `${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear()}`;
     const [prescription,setPrescription]=useState(null);
@@ -31,7 +30,6 @@ function Input(){
         }
     },[prescription])
        
-    //I'm using your api to generate some prescription data based on some doctor notes. You have to return this data in the form of a json based on the doctors notes I provide you. The data should have 7 keys: Name, Age,  Complaint, Diagonosis, Medicine Name,  Dosage, and Duration. Just provide me with the json data nothing else. Here's the doctor notes: Name: Robin, Age: 19, Complaint is Sprain, Diagnosis is Fever. Medicine name, dosage, and duration you have to identify yourself
     const handleChange=(e)=>{
         setInput(e.target.value)
     }
@@ -59,7 +57,7 @@ function Input(){
         <div id='input'>
         <div id={prescription?'input-body':'initial-body'}>
         <div id={prescription?'text-input':'initial-input'}>
-            <textarea id='ta' onChange={handleChange} value={input} placeholder='Enter prescription text...'></textarea>
+            <textarea id='ta' onChange={handleChange} value={input} placeholder="Enter doctor's notes..."></textarea>
             {isLoading?<span className='bold'>Loading...</span>:<button className='btn' onClick={handleClick} >Generate Prescription</button>}
         </div>
             {prescription!=null&&<div ref={inputRef} id='prescription' style={{backgroundColor:'white'}}>

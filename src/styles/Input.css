@@ -1,6 +1,6 @@
 #input{
    padding: 10px 5px ;
-   height: 100%;
+   height: auto;
 }
 #input-body{
     display:flex;
@@ -11,22 +11,23 @@
 }
 #initial-body{
     display:flex;
-    height:100%;
+    height:50vh;
     width: 100%;
     gap:5px;
     justify-content: center;
-    
+    margin-top: 5%;
 }
 #text-input{
     width: 50%;
+    height:50vh
 }
 #initial-input{
     width:60%;
-height: 80%;
+    height: 80%;
 }
 #ta{
     width: 97%;
-    height: 50%;
+    height: 100%;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.8);
     font-size: 15px;
@@ -63,7 +64,7 @@ height: 80%;
     background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../medical-logo.png');
     padding:12px;
     width: 50%;  
-    height: 120vh;
+  
     background-repeat: no-repeat;
     background-position: center center
 }
@@ -134,13 +135,13 @@ hr{
 }
 @media screen and (max-width:1000px) {
     #input{
-        height:70%;
-        padding:10px 0;
+        height:100%;
+     
     }
    #input-body{
        flex-direction: column;
        align-items: center;
-       gap:10px
+       gap:50px
    }
   
    #text-input{
