@@ -124,10 +124,13 @@ ul{
     grid-template-columns: repeat(3,1fr);
     font-size: 14px;
 }
-#content{
-    text-align: justify;
-    font-family: 'Liu Jian Mao Cao';
-    font-size: 18px;
+#sign{
+    display:flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+#sign>span{
+    font-weight: bold;
 }
 hr{
    

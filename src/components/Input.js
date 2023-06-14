@@ -5,7 +5,7 @@ import html2canvas from 'html2canvas';
 import axios from 'axios';
 import medicalLogo from '../medical-logo.png';
 import barcode from '../barcode.png';
-
+import sign from '../sign.png';
 
 function Input(){
     const [input,setInput] = useState("");
@@ -63,7 +63,7 @@ function Input(){
             {prescription!=null&&<div ref={inputRef} id='prescription' style={{backgroundColor:'white'}}>
             <div id='header'>
             <div>
-                <span className='highlighted'>Mihir Saini</span><br/>
+                <span className='highlighted'>Dr. Mihir Saini</span><br/>
                 <span>M.B.B.S., M.D., M.S. | Reg. No:270988</span><br/>
                 <span>Mob. No: +91-8439747234</span>
             </div>
@@ -80,7 +80,7 @@ function Input(){
             <hr/>
             <div id='patient-info'>
                 <div>
-                    <img src={barcode} height='50' width='100'></img>
+                    <img src={barcode} alt='barcode' height='50' width='100'></img>
                     <div className='info'>
                         <div>
                             <span className='bold'>ID: 14 - {prescription?.name} (M) / {prescription?.age} Y</span><br/>
@@ -151,10 +151,15 @@ function Input(){
                 </div>
                 <div>
                     <span className='bold'>Advice Given:</span><br/>
-                    <span>* FEVER</span>
+                    <span>*SAMPLE ADVICE</span>
                 </div>
                 <div>
                     <span className='bold'>Follow up: 21-06-2023</span><br/>
+                </div>
+                <div id='sign'>
+                <img src={sign} alt='sign' width='100' height='50'></img>
+                <span>Dr. Mihir Saini</span>
+                <span>M.B.B.S., M.D., M.S.</span>
                 </div>
             </div>
             </div>}
