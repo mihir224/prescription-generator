@@ -1,8 +1,8 @@
 # Prescription Generator
 
-A basic pdf generator which takes doctor notes as input and generates a prescription pdf based on the input. 
+A web app that takes in doctor’s notes, and generates an appropriate prescription. Here I’ve made use of open AI’s API to query the doctor’s diagnosis and retrieve the appropriate medicine name and dosage. This retrieved data is then used in the generated prescription.
 
-Here, I've made use of the jsPdf to generate the pdf and the html2canvas package to convert the html containing the input prescription to an PNG format so that it can be added as an image in the generated pdf.
+I've used jsPdf to generate the pdf and the html2canvas package to convert the html containing the input prescription to an PNG format so that it can be added as an image in the generated pdf.
 
 
 ## To run the project locally
