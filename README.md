@@ -4,6 +4,7 @@ A web app that takes in doctor’s notes, and generates an appropriate prescript
 
 I've used jsPdf to generate the pdf and the html2canvas package to convert the html containing the input prescription to an PNG format so that it can be added as an image in the generated pdf.
 
+[Sample Prescription](https://drive.google.com/file/d/1V6SkjzHu9ElQLWalDJuu1PyFG3c0-EKY/view?usp=drivesdk)
 
 ## To run the project locally
 
