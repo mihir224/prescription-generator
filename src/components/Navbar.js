@@ -5,7 +5,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 function Navbar(){
     return (
         <div id='navbar'>
-            <h2 id='logo'>Prescriptify</h2>
+            <a id='logo' href="/"><h2>Prescriptify</h2></a>
         </div>
     )
 }
