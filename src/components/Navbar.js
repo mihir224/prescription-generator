@@ -5,7 +5,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 function Navbar(){
     return (
         <div id='navbar'>
-            <DescriptionIcon style={{fontSize:'28px'}}/><h2 id='logo'>Prescription Generator</h2>
+            <h2 id='logo'>Prescriptify</h2>
         </div>
     )
 }

@@ -4,9 +4,15 @@
     padding:15px 30px;
     color:white;
     gap:5px;
-    background-color: #da894f;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.411);
+    background-color: #2b2a2aa9;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.21);
 }
 #navbar>h2{
     margin:0;
+    font-size:34px;
+}
+@media screen and (max-width:500px) {
+    #navbar{
+        justify-content: center;
+    }
 }

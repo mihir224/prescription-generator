@@ -6,6 +6,8 @@ import axios from 'axios';
 import medicalLogo from '../medical-logo.png';
 import barcode from '../barcode.png';
 import sign from '../sign.png';
+import { ThreeDots } from  'react-loader-spinner'
+
 
 function Input(){
     const [input,setInput] = useState("");
@@ -56,10 +58,30 @@ function Input(){
     return(
         <div id='input'>
         <div id={prescription?'input-body':'initial-body'}>
-        <div id={prescription?'text-input':'initial-input'}>
-            <textarea id='ta' onChange={handleChange} value={input} placeholder="Enter doctor's notes..."></textarea>
-            {isLoading?<span className='bold'>Loading...</span>:<button className='btn' onClick={handleClick} >Generate Prescription</button>}
+        <div id='initial-input' style={{display:`${prescription?"none":"content"}`}}>
+        <p id='intro' >Welcome to <span style={{fontWeight:'700'}}>Prescriptify</span>! To get started, Enter the patient's name, age, and
+         the diagnosis done by the doctor. This diagnosis should include the patient's weight, height, blood pressure, complaint and the 
+         doctor's diagnosis of this complaint. After this, click generate. In a few seconds, your prescription would be ready! In addition 
+         to the diagnosis, the prescription will also contain the medicine name, dosage and duration. <br/> <br/>Feel free to write us at mihirsaini25@gmail.com for any queries.</p>
+            <textarea id='ta' onChange={handleChange} value={input} placeholder="Enter doctor's notes here"></textarea>
+            {isLoading?
+            (
+                <div style={{display:'flex',justifyContent:'center'}}>
+                <ThreeDots 
+                    height="80" 
+                    width="80" 
+                    radius="9"
+                    color="white" 
+                    ariaLabel="three-dots-loading"
+                    wrapperStyle={{}}
+                    wrapperClassName=""
+                    visible={true}
+                    />
+                </div>
+            )
+                :<button className='btn' onClick={handleClick} >GENERATE</button>}
         </div>
+            <h3 id='intro' style={{padding:'10px',display:`${prescription?"":"none"}`}}>Here's your prescription:</h3>
             {prescription!=null&&<div ref={inputRef} id='prescription' style={{backgroundColor:'white'}}>
             <div id='header'>
             <div>
@@ -85,7 +107,7 @@ function Input(){
                         <div>
                             <span className='bold'>ID: 14 - {prescription?.name} (M) / {prescription?.age} Y</span><br/>
                             <span>Address: KOTHRUD, PUNE</span><br/>
-                            <span>Weight (kg): {prescription?.weight}, Height (cms): {prescription?.height}, BP: {prescription?.bp} mmHg </span>
+                            <span>Weight (kg): {prescription?.weight}, Height (cms): {prescription?.height}, BP: {prescription?.bp} </span>
                         </div>
                          <div>
                             <span className='bold'>Referred: By: Dr. Rahane</span>
