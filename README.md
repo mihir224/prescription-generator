@@ -1,8 +1,8 @@
 # Prescription Generator
 
-A web app that takes in doctor’s notes, and generates an appropriate prescription. Here I’ve made use of open AI’s API to query the doctor’s diagnosis and retrieve the appropriate medicine name and dosage. This retrieved data is then used in the generated prescription.
+React-based web app using OpenAI's API to generate medical prescriptions from user input, dynamically populating a template with JSON data. Streamlines prescription creation for healthcare professionals.
 
-I've used jsPdf to generate the pdf and the html2canvas package to convert the html containing the input prescription to an PNG format so that it can be added as an image in the generated pdf.
+I've used jsPdf to generate the pdf and the html2canvas package to convert the html with the prescription template to an PNG format so that it can be added as an image in the generated pdf.
 
 [Sample Prescription](https://drive.google.com/file/d/1V6SkjzHu9ElQLWalDJuu1PyFG3c0-EKY/view?usp=drivesdk)
 
