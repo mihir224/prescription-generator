@@ -1,4 +1,4 @@
-# Prescription Generator
+# Prescriptify
 
 React-based web app using OpenAI's API to generate medical prescriptions from user input, dynamically populating a template with JSON data. Streamlines prescription creation for healthcare professionals.
 
